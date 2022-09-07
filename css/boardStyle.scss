@@ -1,0 +1,101 @@
+@use "./mixins/_layout.scss" as *;
+@include layout;
+
+main{
+    position: absolute;
+    background-color: var(--prim);
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    padding: 40px;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: 1px solid #F4E533;
+    color: #F4E533;
+    line-height: 100px;
+    width: 50%;
+    box-shadow: 5px 5px 15px 10px var(--prim);
+    .easyBox, .mediumBox,.hardBox{
+        display: flex;
+        justify-content: space-between;
+       button{
+        margin: 20px;
+        color: #F4E533;
+        background-color: var(--prim);
+        padding: 20px;
+        border: 1px solid #F4E533;
+        border-radius: 10px;
+        font-size: 1.8rem;
+        cursor: pointer;
+        font-weight: 700;
+    }
+  
+    p{
+        flex-grow: 1;
+        text-align: right;
+        margin-right: 20px;
+        span{
+        color: #fff;
+    }
+    }
+    }
+   
+}
+#yourScore{
+    color: #fff;
+}
+@media screen and (max-width : 1300px) and (min-width: 851px){
+    main{
+        padding: 40px;
+        font-size: 2rem;
+        line-height: 100px;
+        width: 70%;
+        .easyBox, .mediumBox,.hardBox{
+           button{
+            margin: 20px;
+            padding: 15px;
+            font-size: 1.8rem;
+        }
+        p{
+            margin-right: 20px;
+        }
+        }
+    }
+}
+@media screen and (max-width : 850px) and (min-width: 551px){
+    main{
+        padding: 20px;
+        font-size: 1.7rem;
+        line-height: 80px;
+        width: 80%;
+        .easyBox, .mediumBox,.hardBox{
+           button{
+            margin: 10px;
+            padding: 10px;
+            font-size: 1.3rem;
+        }
+        p{
+            margin-right: 20px;
+        }
+        }
+    }
+}
+@media screen and (max-width: 551px){
+    main{
+        padding: 10px;
+        font-size: 1rem;
+        line-height: 50px;
+        width: 90%;
+        .easyBox, .mediumBox,.hardBox{
+           button{
+            margin: 10px;
+            padding: 10px;
+            font-size: 1rem;
+        }
+        p{
+            margin-right: 10px;
+        }
+        }
+    }
+}

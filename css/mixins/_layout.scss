@@ -1,0 +1,20 @@
+@mixin layout {
+    *,*::after,*::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(../images/background.jpg);
+    background-size: cover !important;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    background-position: top;
+    perspective: 600;
+}
+:root{
+    --sec:#54387e;
+    --prim:#2d1637;
+}
+}

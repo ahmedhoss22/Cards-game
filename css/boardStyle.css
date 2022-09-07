@@ -1,0 +1,123 @@
+*, *::after, *::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  background-image: url(../images/background.jpg);
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  background-position: top;
+  -webkit-perspective: 600;
+          perspective: 600;
+}
+
+:root {
+  --sec:#54387e;
+  --prim:#2d1637;
+}
+
+main {
+  position: absolute;
+  background-color: var(--prim);
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 40px;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: 1px solid #F4E533;
+  color: #F4E533;
+  line-height: 100px;
+  width: 50%;
+  -webkit-box-shadow: 5px 5px 15px 10px var(--prim);
+          box-shadow: 5px 5px 15px 10px var(--prim);
+}
+main .easyBox, main .mediumBox, main .hardBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+main .easyBox button, main .mediumBox button, main .hardBox button {
+  margin: 20px;
+  color: #F4E533;
+  background-color: var(--prim);
+  padding: 20px;
+  border: 1px solid #F4E533;
+  border-radius: 10px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  font-weight: 700;
+}
+main .easyBox p, main .mediumBox p, main .hardBox p {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  text-align: right;
+  margin-right: 20px;
+}
+main .easyBox p span, main .mediumBox p span, main .hardBox p span {
+  color: #fff;
+}
+
+#yourScore {
+  color: #fff;
+}
+
+@media screen and (max-width: 1300px) and (min-width: 851px) {
+  main {
+    padding: 40px;
+    font-size: 2rem;
+    line-height: 100px;
+    width: 70%;
+  }
+  main .easyBox button, main .mediumBox button, main .hardBox button {
+    margin: 20px;
+    padding: 15px;
+    font-size: 1.8rem;
+  }
+  main .easyBox p, main .mediumBox p, main .hardBox p {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 850px) and (min-width: 551px) {
+  main {
+    padding: 20px;
+    font-size: 1.7rem;
+    line-height: 80px;
+    width: 80%;
+  }
+  main .easyBox button, main .mediumBox button, main .hardBox button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.3rem;
+  }
+  main .easyBox p, main .mediumBox p, main .hardBox p {
+    margin-right: 20px;
+  }
+}
+@media screen and (max-width: 551px) {
+  main {
+    padding: 10px;
+    font-size: 1rem;
+    line-height: 50px;
+    width: 90%;
+  }
+  main .easyBox button, main .mediumBox button, main .hardBox button {
+    margin: 10px;
+    padding: 10px;
+    font-size: 1rem;
+  }
+  main .easyBox p, main .mediumBox p, main .hardBox p {
+    margin-right: 10px;
+  }
+}
